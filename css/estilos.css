@@ -1,0 +1,687 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root{
+    --pading-container: 100px 0;
+    --color-title: #001A49;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: var(--pading-container);
+}
+
+.inicio{
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    max-height: 800px;
+    position: relative;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    color: #fff;
+}
+
+/* esta etiqueta referencia a un elemento hijo de la etiqueta inicio */
+.inicio::before{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* aplica una capa de trasparencia a la imagen  */
+    background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%  ), url('../images/inicio.png');
+    /* para que la imagen se adapte al contenido  */
+    background-size: cover;
+    /* Recorte sacado de la pagina bennettfeely.com */
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 95%, 0 80%);
+    z-index: -1;
+}
+
+/* Nav */
+
+.nav{
+    --pading-container:0;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.nav_title{
+    font-weight: 300;
+}
+
+.nav-link{
+    margin-left: auto;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 2em;
+}
+
+.nav-items{
+    list-style: none;
+}
+
+.nav-links{
+    color: white;
+    text-decoration: none;
+}
+
+
+.nav-menu{
+    margin-left: auto;
+    cursor: pointer;
+    display: none;
+}
+
+.nav-img{
+    display: block;
+    width: 30px;
+}
+
+.nav-close{
+    display: var(--show, none);
+}
+
+.inicio-container{
+    max-width: 800px;
+    --pading-container:0;
+    display: grid;
+    grid-auto-rows: max-content;
+    align-content: center;
+    gap: 1em;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.inicio-title{
+    font-size: 3rem;
+}
+
+.inicio-parrafo{
+    margin-bottom: 20px;
+}
+
+.cta{
+    display: inline-block;
+    background-color: #0a2f74;
+    justify-self: center;
+    color: white;
+    text-decoration: none;
+    padding: 13px 20px;
+    border-radius: 30px;
+}
+
+
+/* About */
+
+.about{
+    text-align: center;
+}
+
+.subtitle{
+    color: var(--color-title);
+    font-size: 2rm;
+    margin-bottom: 25px;
+}
+
+.about-parrafo{
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.abut-main{
+    padding-top: 80px;
+    display: grid;
+    width: 90%;
+    margin: 0 auto;
+    gap: 1em;
+    overflow: hidden;
+    /* coloca paralelamete en columnas y las ajusta al tamaño de la pantala*/
+    grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+}
+
+.about-icons{
+    display: grid;
+    gap: 1em;
+    justify-items: center;
+    width: 260px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.about-icon{
+    width: 40px;
+
+}
+
+.conocimiento{
+    overflow: hidden;
+    background-color: #f5f7e6;
+    background-image:  radial-gradient(#062198 0.9500000000000001px, transparent 0.9500000000000001px), radial-gradient(#062198 0.9500000000000001px, #f5f7e6 0.9500000000000001px);
+    background-size: 38px 38px;
+    background-position: 0 0,19px 19px;
+}
+
+.conocimiento-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    align-items: center;
+}
+
+.conocimento-parrafo{
+    line-height: 1.7;
+    margin-bottom: 15px;
+
+}
+
+.conocimento-picture{
+    max-width: 50px;
+}
+
+.conocimento-img{
+    width: 100%;
+    display: block;
+}
+
+/* Precio */
+
+.precio{
+    text-align: center;
+}
+
+.precio-tabla{
+    padding-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5em;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.precio-elementos{
+    background-color: #e5e5f7;
+    text-align: center;
+    border-radius: 10px;
+    width: 330px;
+    padding: 40px;
+    --color-plan: #696871; 
+    --color-price: #1d293f;
+    --bg-cta: #fff;
+    --color-cta: #5454d4;
+    --color-items: #696871;
+}
+
+.precio-elementos--best{
+    width: 370px;
+    padding: 60px 40px;
+    background-color: #ff7143;
+    --color-plan: rgb(255 255 255 / 75%); 
+    --color-price: #fff;
+    --bg-cta: #9f3919;
+    --color-cta: #fff;
+    --color-items: #fff;
+}
+
+.precio-name{
+    color: var(--color-plan);
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+
+.precio-price {
+    font-size: 2rem;
+    color: var(--color-price);
+}
+
+.precio-items{
+    margin-top: 35px;
+    display: grid;
+    gap: 1em;
+    font-weight: 300;
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+    color: var(--color-items);
+}
+
+.precio-cta{
+    display: block;
+    padding: 20px 0;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: var(--bg-cta);
+    font-weight: 600;
+    color: var(--color-cta);
+    box-shadow: 0 0 1px rgba(0, 0, 0, .5);
+}
+
+/* clientes */
+
+.clientes{
+    background-color: #e5e5f7;
+}
+
+.clientes-container{
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    gap: 1em;
+    align-items: center;
+    gap: 2em;
+}
+
+.clientes-body{
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+    grid-column: 2/3;
+    grid-row: 1/3;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.clientes-body--show{
+    pointer-events: unset;
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.clientes-img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 50% 30%;
+}
+
+.clientes-text{
+    max-width: 700px;
+}
+
+.clientes-tipo{
+    background-color: royalblue;
+    color: white;
+    display: inline-block;
+    padding: 5px;
+}
+
+.clientes-arrow{
+    width: 90%;
+    cursor: pointer;
+}
+/* preguntas */
+
+.pregunas{
+    text-align: center;
+}
+
+.pregunas-container{
+    display: grid;
+    gap: 2rem;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.preguntas-pading{
+    padding: 0;
+    transition: padding .3s;
+    border: 1px solid #5454d4;
+    border-radius: 6px;
+
+}
+
+.preguntas-pading--add{
+    padding-bottom: 30px;
+}
+
+.preguntas-answer{
+    padding: 0 30px 0;
+    overflow: hidden;
+}
+
+.preguntas-title{
+    text-align: left;
+    display: flex;
+    font-size: 20px;
+    padding: 30px 0 30px;
+    cursor: pointer;
+    color: var(--color-title);
+    /* Separa la flecha de el texto manda un al comienzo y otro al final */
+    justify-content: space-between;
+}
+
+.preguntas-arrow{
+    border-radius: 50px;
+    background-color: var(--color-title);
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    margin-left: 10px;
+    transition: transform .3s;
+}
+
+.preguntas-arrow--rotate{
+    transform: rotate(180deg);
+}
+
+.preguntas-show{
+    text-align: left;
+    height: 0;
+    transition: height .3s;
+}
+.preguntas-img{
+    display: block;
+}
+
+.preguntas-copy{
+    width: 60%;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+/* Footer */
+
+.footer{
+    background-color: #1d293f;
+}
+
+.footer-title{
+    font-weight: 300;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.footer-title, .footer-novedades{
+    color: white;
+    /* margin-left: 30px; */
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-between; /* Los elementos se pegan a las esquinas */
+    align-items: center;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 60px;
+}
+
+.nav-footer{
+    padding-bottom: 20px;
+    display: grid;
+    gap: 1em;
+    grid-auto-flow: row;
+    height: 100%;
+}
+
+.nav-link-footer{
+    display: flex;
+    margin: 0;
+    margin-right: 20px;
+    flex-wrap: wrap;  /* Si el contenido no entra en una linea crea otra */
+}
+
+.footer-inputs{
+    margin-top: 10px;
+    display: flex;
+    overflow: hidden;
+}
+
+.footer-input{
+    background-color: white;
+    height: 50px;
+    display: block;
+    padding-left: 10px;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    margin-right: 16px;
+}
+
+.footer-submit{
+    margin-left: auto;
+    display: inline-block;
+    height: 50px;
+    padding: 0 20px;
+    background-color: #2091f9;
+    border: none;
+    font-size: 1rem;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.footer-copy{
+    --padding-container: 30px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.footer-copyright{
+    font-weight: 300;
+}
+
+.footer-icon{
+    display: inline-flex;
+    margin-bottom: 10px;
+}
+
+.footer-img{
+    width: 30px;
+    
+}
+
+/* Para adaptar a dispocitivos moviles */
+
+@media (max-width:800px){
+    .nav-menu{
+        display: block;
+    }
+
+    .nav-link--menu{
+        position: fixed;
+        background-color: black;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        z-index: 100;
+        opacity: 0;
+        pointer-events: none;
+        transition: .7s opacity;
+    }
+    
+    .nav-link--show{
+        --show:block;
+        opacity: 1;
+        pointer-events: unset;
+    
+    }
+    
+    .nav-close{
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        width: 30px;
+        cursor: pointer;
+    }
+
+    .inicio-title{
+        font-size: 2.5rem;
+    }
+
+    .abut-main{
+        gap: 2em;
+
+    }
+    
+    /* Selecciona el ultio elemento con la entiqueta about-icons */
+    .about-icons:last-of-type{
+        grid-column: 1/-1; /* Esto hace que el tercer elemento se centre y ocupe toda la grid */
+
+    }
+
+    .conocimiento-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content 1fr;
+        gap: 3em;
+        text-align: center;
+    }
+
+    .conocimento-picture{
+        grid-row: 1/2;
+    }
+
+    .conocimento-img{
+        justify-self: center; /* centra orizontalente */
+    }    
+
+    .clientes-container{
+        grid-template-columns: 30px 1fr 30px;
+    }
+
+    .clientes-body{
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content max-content;
+        gap: 3em;
+        justify-items:center ;
+    }
+
+
+    .clientes-img{
+        width: 200px;
+        height: 200px;
+        
+    }
+
+    .preguntas-copy{
+        width: 100%;
+    }
+
+    .footer-container{
+        flex-wrap: wrap;
+    }
+
+    .nav-footer{
+        width: 100%;
+        justify-items: center;
+    }
+
+    .nav-link-footer{
+        width: 100%;
+        justify-content: space-evenly;
+        margin: 0;
+    }
+
+    .footer-form{
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    .footer-input{
+        flex: 1;
+    }
+
+}
+
+@media (max-width:600px){
+
+    .inicio-title{
+        font-size: 2rem;
+    }
+
+    .inicio-parrafo{
+        font-size: 1rem;
+    }
+
+    .subtitle{
+        font-size: 1.8rem;
+    }
+
+    .precio-elementos{
+        width: 80%;
+    }
+
+    .precio-elementos--best{
+        width: 80%;
+    }
+
+    .precio-price{
+        font-size: 2rem;
+    }
+
+    .clientes{
+        --pading-container: 60px 0 60px;
+    }
+
+    .clientes-container{
+        grid-template-columns: 28px 1fr 28px;
+    }
+
+    .clientes-arrow{
+        width: 100%;
+    }
+
+    .clientes-tipo{
+        margin-top: 15px;
+
+    }
+
+    .preguntas-title{
+        font-size: 1rem;
+
+    }
+
+    /* footer */
+
+    .footer-title{
+        justify-self: start;
+        margin-bottom: 15px;
+
+    }
+
+    .nav-footer{
+        padding-bottom: 60px;
+    }
+    
+    .nav-link-footer{
+        justify-content: space-between;
+    }
+
+    .footer-inputs{
+        flex-wrap: wrap;
+
+    }
+
+    .footer-input{
+        flex-basis: 100%;
+        margin: 0;
+        margin-bottom: 16px;
+    }
+
+    .footer-submit{
+        margin-right: auto;
+        margin-left: 0;
+    }
+
+    
+
+}

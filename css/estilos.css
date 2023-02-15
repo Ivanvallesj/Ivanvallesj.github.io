@@ -144,7 +144,7 @@ body{
     display: grid;
     width: 90%;
     margin: 0 auto;
-    gap: 1em;
+    gap: 2.5rem;
     overflow: hidden;
     /* coloca paralelamete en columnas y las ajusta al tamaño de la pantala*/
     grid-template-columns: repeat(auto-fit, minmax(260px, auto));
@@ -182,16 +182,16 @@ body{
 .conocimento-parrafo{
     line-height: 1.7;
     margin-bottom: 15px;
-
 }
 
 .conocimento-picture{
-    max-width: 50px;
+    max-width: 350px;
 }
 
-.conocimento-img{
+.conocimiento-img{
     width: 100%;
     display: block;
+    border-radius: 1rem;
 }
 
 /* Precio */
@@ -219,6 +219,7 @@ body{
     --bg-cta: #fff;
     --color-cta: #5454d4;
     --color-items: #696871;
+    box-shadow: 0px 0px 55px 0px rgba(0,0,0,0.75);
 }
 
 .precio-elementos--best{
